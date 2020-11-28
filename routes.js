@@ -1,22 +1,25 @@
 'use strict';
 
-module.exports = function(app){
+module.exports = function (app) {
     var jsonku = require('./controller');
 
     app.route('/')
-    .get(jsonku.index);
+        .get(jsonku.index);
 
     app.route('/tampil')
-    .get(jsonku.tampilSemuaData)
+        .get(jsonku.tampilSemuaData)
 
     app.route('/tampil/:id')
-    .get(jsonku.tampilByID)
+        .get(jsonku.tampilByID)
 
     app.route('/simpanmahasiswa')
-    .post(jsonku.tambahMahasiswa)
+        .post(jsonku.tambahMahasiswa)
 
     app.route('/ubahdatamahasiswa')
-    .put(jsonku.ubahDataMahasiswa)
+        .put(jsonku.ubahDataMahasiswa)
 
-    
+    app.route('/hapusdatamahasiswa')
+        .delete(jsonku.hapusDataMahasiswa)
+
+
 }
