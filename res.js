@@ -1,4 +1,4 @@
-`use strict` : 
+`use strict` ;
 
 exports.ok = function(value, res){
     const data = {
